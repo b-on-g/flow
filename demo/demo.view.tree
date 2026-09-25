@@ -1,0 +1,19 @@
+$bog_flow_demo $mol_book2
+	title \Flow demo
+	pages /
+		<= App $mol_page
+			title \Order
+			body /
+				<= Price_field $mol_form_field
+					name \Price
+					control <= Price $mol_number
+						value? <=> price? 100
+				<= Count_field $mol_form_field
+					name \Count
+					control <= Count $mol_number
+						value? <=> count? 3
+				<= Total $mol_view
+					sub /
+						<= total \
+		<= Panel $bog_flow_panel
+			flow_root <= app_root null

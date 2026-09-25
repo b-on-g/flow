@@ -1,0 +1,30 @@
+$bog_flow_panel $mol_page
+	title \Flow
+	float false
+	attr *
+		^
+		bog_flow_panel_float <= float
+	flow_root null
+	Flow $bog_flow
+		root <= flow_root
+	tools /
+		<= Query $mol_search
+			query? <=> query? \
+	body /
+		<= List $mol_list
+			rows <= rows /
+	Row* $mol_view
+		attr *
+			bog_flow_panel_row_hot <= row_hot* false
+		sub /
+			<= Expand* $mol_check_expand
+				level <= row_level* 0
+				expanded? <=> row_expanded*? null
+				title <= row_name* \
+				hint <= row_host* \
+			<= Count* $mol_view
+				sub /
+					<= row_count* \
+			<= Value* $mol_view
+				sub /
+					<= row_value* \
