@@ -1,0 +1,18 @@
+$bog_flow_hints $mol_page
+	title @ \Hints
+	body /
+		<= Inline $mol_view sub /
+			<= inline \inline
+		<= Declared $mol_view sub /
+			<= label
+		<= Overridden $mol_view sub /
+			<= computed \
+		<= From_page $mol_view
+			sub <= tools
+		<= From_view $mol_view sub /
+			<= minimal_height
+	label \Label
+
+$bog_flow_hints_child $bog_flow_hints
+	foot /
+		<= label
