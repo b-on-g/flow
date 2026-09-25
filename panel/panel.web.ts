@@ -1,4 +1,4 @@
-namespace $ {
+namespace $.$$ {
 
 	$mol_dom_context.document?.addEventListener(
 		'DOMContentLoaded',
